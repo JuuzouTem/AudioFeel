@@ -1,0 +1,106 @@
+/* Genel Sayfa Ayarları (Aynı) */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Canvas Ayarları (Aynı) */
+#visualizerCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Kontrol Paneli Ayarları (Aynı) */
+#controls {
+    text-align: center;
+    padding: 2.5em 3.5em;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#controls h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* --- YENİ MOD SEÇİM STİLLERİ --- */
+
+.step-label {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.mode-buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.mode-button {
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #8a2be2;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.mode-button:hover {
+    background-color: #8a2be2;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Dosya Seçme Butonu (Aynı) */
+.custom-file-button {
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #8a2be2, #4a00e0);
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.custom-file-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 25px rgba(74, 0, 224, 0.4);
+    background: linear-gradient(45deg, #9b30ff, #5e24ff);
+}
+
+/* Gizli elementler için yardımcı sınıf */
+.hidden {
+    display: none !important;
+}
+
+#audioFile {
+    display: none;
+}
+#audioPlayer {
+    display: none !important; 
+}

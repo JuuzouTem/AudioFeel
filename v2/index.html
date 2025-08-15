@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzik Duygusu Görselleştiricisi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="visualizerCanvas"></canvas>
+
+    <div id="controls">
+        <h1>Müzik Duygusu Görselleştiricisi</h1>
+        
+        <!-- 1. Adım: Mod Seçimi (Başlangıçta görünür) -->
+        <div id="modeSelection">
+            <p class="step-label">Bir görsel mod seçin</p>
+            <div class="mode-buttons-container">
+                <button class="mode-button" data-mode="cosmic">Kozmik Nabız</button>
+                <button class="mode-button" data-mode="waves">Neon Dalgalar</button>
+                <button class="mode-button" data-mode="storm">Parçacık Fırtınası</button>
+            </div>
+        </div>
+
+        <!-- 2. Adım: Dosya Seçimi (Başlangıçta gizli) -->
+        <div id="fileSelection" class="hidden">
+            <label for="audioFile" class="custom-file-button">
+                <i class="fas fa-music"></i>
+                Müzik Seç
+            </label>
+            <input type="file" id="audioFile" accept="audio/*" />
+        </div>
+
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
